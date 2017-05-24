@@ -1,10 +1,11 @@
+/**
+ * Created by stdeljak on 21.03.2017.
+ */
+
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-/**
- * Created by stbormir on 20.03.2017.
- */
 public class Server {
 
     public static void main(String[] args) {

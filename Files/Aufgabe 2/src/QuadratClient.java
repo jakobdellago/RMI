@@ -1,14 +1,15 @@
+/**
+ * Created by stdeljak on 21.03.2017.
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-/**
- * Created by stbormir on 20.03.2017.
- */
 public class QuadratClient {
 
-    public static void main(String[] args) {        //Client
+    public static void main(String[] args) {       
         try {
 
             String host;
@@ -22,12 +23,12 @@ public class QuadratClient {
             Quadrat h = (Quadrat) registry.lookup("test");
 
 
-            System.out.println("Zahl eingeben die Berechnet werden soll:");
+            System.out.println("Zu berechnende Zahl eingeben:");
             String enter= reader.readLine();
 
             long res = h.quadrat(Integer.parseInt(enter));
 
-            System.out.println("Ergebniss: "+res);
+            System.out.println("Ergebnis: "+res);
         } catch (Exception e) {
             e.printStackTrace();
         }

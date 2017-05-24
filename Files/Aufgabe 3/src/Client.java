@@ -1,22 +1,22 @@
-import java.io.BufferedReader;
+/**
+ * Created by stdeljak on 21.03.2017.
+ */
 
+import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-/**
- * Created by stbormir on 03.04.2017.
- */
 public class Client implements Serializable {
 
-    public static void main(String[] args) {        //Client
+    public static void main(String[] args) {   
         try {
 
             String host;
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Adresse eingeben mitder  verbunden werden soll:");          //Einlesen und aufrufen der Funktion
+            System.out.println("Adresse eingeben mitder  verbunden werden soll:"); 
 
             host= reader.readLine();
 
@@ -24,7 +24,7 @@ public class Client implements Serializable {
             Ant a = (Ant) registry.lookup("antwort");
 
 
-            System.out.println("Frage eingeben eingeben:");
+            System.out.println("Frage eingeben:");
 
             String enter= reader.readLine();
 
@@ -41,7 +41,7 @@ public class Client implements Serializable {
 
     public void Ausgeben(String antwort){
 
-        System.out.println("Antword: "+antwort);
+        System.out.println("Antwort: "+antwort);
 
     }
 

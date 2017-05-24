@@ -1,12 +1,10 @@
+/**
+ * Created by stdeljak on 21.03.2017.
+ */
+
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.security.spec.ECField;
-
-/**
- * Created by stbormir on 03.04.2017.
- */
-
-
 
 public class AntImpl extends UnicastRemoteObject implements Ant {
 
@@ -15,7 +13,7 @@ public class AntImpl extends UnicastRemoteObject implements Ant {
 
     }
 
-   public void  Antwort(String i, Client c) {           //Implementation der Funktion
+   public void  Antwort(String i, Client c) {        
         try {
             Thread.sleep(10000);
 
